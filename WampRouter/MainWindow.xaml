@@ -1,0 +1,30 @@
+﻿<Window 
+	x:Class="WampRouter.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="MainWindow" Height="300" Width="600">
+	
+    <Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<StackPanel>
+			<StackPanel Orientation="Horizontal">
+				<Button Content="Open Router" Click="Open_Click" />
+				<Button Content="Close Router" Click="Close_Click" />
+				<Button Content="Open Web Socket Monitor" Click="OpenWebSocketMonitor_Click" />
+			</StackPanel>
+		</StackPanel>
+		<Grid Grid.Row="1">
+			<Border BorderBrush="#808080" BorderThickness="1" CornerRadius="4" Margin="4">
+				<ScrollViewer VerticalScrollBarVisibility="Visible" Margin="4">
+					<TextBlock x:Name="textBlockLog" TextWrapping="Wrap" />
+				</ScrollViewer>
+			</Border>
+		</Grid>  
+	</Grid>
+</Window>
